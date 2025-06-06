@@ -145,7 +145,14 @@ e = abs(scipy.fftpack.ifft2(con))
 * Tạo bộ lọc Butterworth với bán kính cắt r0
 * Nhân phổ tần số với bộ lọc
 
-### 2. BÀI TẬP - Chương trình Menu
+### 2. BÀI TẬP
+#### Bài 1: Viết chương trình tạo menu cho phép người dùng chọn các phương pháp biến đổi ảnh như sau:
+- Image inverse transformation
+- Gamma-Correction
+- Log Transformation
+- Histogram equalization
+- Contrast Stretching
+- Khi người dùng ấn phím I, G, L, H, C thì chương trình sẽ thực hiện hàm tương ứng cho các hình trong thư mục exercise. Lưu và hiển thị các ảnh đã biến đổi.
 
 ```python
 def img_inv_func(img):
