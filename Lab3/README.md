@@ -115,7 +115,7 @@ plt.show()
 - **imageio**: Đọc và ghi ảnh
 - **matplotlib.pyplot**: Hiển thị ảnh và biểu đồ
 ### THUẬT TOÁN SỬ DỤNG
-- Ở bài này sử dụng thuật toán biến dạng hình học geometric transformatio để tạo hiệu ứng sóng lượn trên ảnh
+- Ở bài này sử dụng thuật toán biến dạng hình học geometric transformer để tạo hiệu ứng sóng lượn trên ảnh
 
 ### GIẢI THÍCH HOẠT ĐỘNG
 ```python
