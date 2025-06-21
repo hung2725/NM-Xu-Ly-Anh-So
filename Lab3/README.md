@@ -33,7 +33,7 @@ plt.show()
 - **imageio**: Đọc và ghi ảnh
 - **matplotlib.pyplot**: Hiển thị ảnh và biểu đồ
 ### THUẬT TOÁN SỬ DỤNG
-- Ở bài này sử dụng thuật toán tịnh tiến ảnh và dùng nd.shift để thực hiện điều đó và hàm này nằm trong thư viện scipy.ndimage
+- Ở bài này sử dụng thuật toán tịnh tiến ảnh và dùng nd.shift để thực hiện điều đó và hàm này nằm trong thư viện cipy.ndimage
 ### GIẢI THÍCH HOẠT ĐỘNG
 ```python
 data = iio.imread("fruit.jpg", mode = "F")
@@ -92,7 +92,8 @@ plt.show()
 - **imageio**: Đọc và ghi ảnh
 - **matplotlib.pyplot**: Hiển thị ảnh và biểu đồ
 ### THUẬT TOÁN SỬ DỤNG
-- 
+- Bài toán dùng thuật toán giãn nhị phân binary dilation có trong thư viện scipy.ndimag. Bài này là 1 trong những kỹ thuật trong xử lý ảnh cơ bản mở rộng các vùng sáng trong ảnh
+
 ### GIẢI THÍCH HOẠT ĐỘNG
 
 ```python
@@ -115,7 +116,7 @@ plt.show()
 - **imageio**: Đọc và ghi ảnh
 - **matplotlib.pyplot**: Hiển thị ảnh và biểu đồ
 ### THUẬT TOÁN SỬ DỤNG
-- Ở bài này sử dụng thuật toán biến dạng hình học geometric transformer để tạo hiệu ứng sóng lượn trên ảnh
+- Ở bài này sử dụng thuật toán biến dạng hình học geometric transformatio để tạo hiệu ứng sóng lượn trên ảnh
 
 ### GIẢI THÍCH HOẠT ĐỘNG
 ```python
