@@ -8,7 +8,7 @@
 - **imageio**: Đọc và ghi ảnh
 - **matplotlib.pyplot**: Hiển thị ảnh và biểu đồ
 ### THUẬT TOÁN SỬ DỤNG
-- Ở bài này sử dụng thuật toán cơ bản của xử lý nảnh đó là cắt ảnh thành vùng con trong ảnh gốc 
+- Bài này sử dụng thuật toán cơ bản của xử lý nảnh đó là cắt ảnh thành vùng con trong ảnh gốc 
 ### GIẢI THÍCH HOẠT ĐỘNG
 ```python
 data = iio.imread("boat.jpg")
