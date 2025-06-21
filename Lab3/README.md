@@ -33,7 +33,7 @@ plt.show()
 - **imageio**: Đọc và ghi ảnh
 - **matplotlib.pyplot**: Hiển thị ảnh và biểu đồ
 ### THUẬT TOÁN SỬ DỤNG
-- Ở bài này sử dụng thuật toán tịnh tiến ảnh và dùng nd.shift để thực hiện điều đó và hàm này nằm trong thư viện cipy.ndimage
+- Bài này thì sử dụng thuật toán tịnh tiến ảnh và dùng nd.shift để thực hiện điều đó và hàm này nằm trong thư viện cipy.ndimage
 ### GIẢI THÍCH HOẠT ĐỘNG
 ```python
 data = iio.imread("fruit.jpg", mode = "F")
