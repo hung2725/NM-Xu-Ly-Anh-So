@@ -45,9 +45,10 @@ b = Image.fromarray(b)
 
 ### Phân vùng theo region
 **Mục địch:** 
-Phân theo vùng chia ảnh thành các khu vực mà các điểm ảnh giống nhau về độ sáng hoặc màu sắc.Trong kiểu phân vùng này, có một số quy tắc được định sẵn mà pixel phải tuân theo để đảm bảo có thể phân loại thành các vùng pixel tương tự phương pháp phân vùng dựa trên khu vực được ưu tiên hơn phương pháp phân vùng dựa trên cạnh trong trường hợp ảnh bị nhiễu
-
-**Nguyên lý:** Chuyển ảnh sang ảnh xám để dễ xử lý ảnh và nhị phân hóa bằng Otsu để tách nền và đối tượng, giảm nhiễu và tách rời các vùng gần nhau khoảng cách của cá điểm ảnh. Tính khoảng cách từ mỗi điểm ảnh nền đến điểm ảnh gần nhất thuộc đối tượng tạo các vùng cho thuật toán phân vùng
+Phân theo vùng chia ảnh thành các khu vực mà các điểm ảnh giống nhau về độ sáng hoặc màu sắc.Trong kiểu phân vùng này, có một số quy tắc được định sẵn mà pixel phải tuân theo để đảm bảo có thể phân loại thành các vùng pixel tương tự phương pháp phân vùng dựa trên
+**Nguyên lý:** 
+- Chuyển ảnh sang ảnh xám để dễ xử lý ảnh và nhị phân hóa bằng Otsu để tách nền và đối tượng, giảm nhiễu và tách rời các vùng gần nhau khoảng cách của cá điểm ảnh
+-  Tính khoảng cách từ mỗi điểm ảnh nền đến điểm ảnh gần nhất thuộc đối tượng tạo các vùng cho thuật toán phân vùng
 
 **Code chính**
 ```python
@@ -84,7 +85,7 @@ c = Image.fromarray(b)
 ```
 ### Sử dụng binary_opening
 
-**Mục địch:** đây là thuật toán kết hợp giữa erosion và dilation. Thực hiện phép erosion trước sau đó mới thực hiện phép giãn dilation nhằm loại bỏ nhiễu nhỏ xóa các đối tượng nhỏ hơn phần tử cấu trúc. Làm mịn biên đối tượng giúp các cạnh trở nên gọn gàng hơn.Tách các đối tượng gần nhau nếu chúng chỉ nối với nhau bằng các điểm nhỏ
+**Mục địch:** đây là thuật toán kết hợp giữa erosion và dilation. Thực hiện phép erosion trước sau đó mới thực hiện phép giãn dilation nhằm loại bỏ nhiễu nhỏ xóa các đối tượng nhỏ hơn phần tử cấu trúc. Làm mịn biên đối tượng giúp các cạnh trở nên gọn gàng hơn
 
 **Nguyên lý:** Đầu tiên phép erosion được áp dụng lên ảnh A với phần tử cấu trúc B. Bước này sẽ loại bỏ tất cả các đối tượng hoặc phần của đối tượng nhỏ hơn phần tử cấu trúc B. Các đối tượng lớn hơn sẽ bị co lại dilation sau đó,phép dilation được áp dụng lên kết quả của bước erosion với cùng phần tử cấu trúc B lúc này sẽ giãn nở lại các đối tượng đã bị co lại, khôi phục lại kích thước ban đầu của chúng, nhưng các đối tượng nhỏ đã bị loại bỏ ở bước erosion sẽ không được khôi phục
 
@@ -150,8 +151,7 @@ iio.imsave('lang_biang.jpg', (d.astype(np.uint8) * 255))
 ```
 ### 2. Viết chương trình chọn Hồ Xuân Hương trong ảnh Đà Lạt từ thư mục exercise. Xoay đối tượng vừa chọn 1 góc 45° và dùng phương pháp Adaptive Thresholding với ngưỡng 60 và lưu vào máy với tên là ho_xuan_huong.jpg.
 
-**Giải thích hoạt động:** bài này bước đầu tiên ta vẫn làm như bước trên là cắt chọn Hồ xuân hương trong file ảnh gốc sau đó là dùng nd.rotate để xoay ảnh với góc là 45 độ và những viền xung quanh là viền màu đen biểu thị cho những chỗ đó có giá trị bằng 0 tiếp đó mới đến bước quan trọng của bài tập đó là dùng phương pháp Adaptive Thresholding với ngưỡng 60 ảnh sẽ bị mờ đi đáng kể với lúc ban đâu
-và cuối cùng là lưu ảnh vơi tên ho_xuan_huong.jpg
+**Giải thích hoạt động:** bài này bước đầu tiên ta vẫn làm như bước trên là cắt chọn Hồ xuân hương trong file ảnh gốc sau đó là dùng nd.rotate để xoay ảnh với góc là 45 độ và những viền xung quanh là viền màu đen biểu thị cho những chỗ đó có giá trị bằng 0 tiếp đó mới đến bước quan trọng của bài tập đó là dùng phương pháp Adaptive Thresholding với ngưỡng 60 ảnh sẽ bị mờ đi đáng kể với lúc ban đâu và cuối cùng là lưu ảnh vơi tên ho_xuan_huong.jpg
 
 **Code chính**
 ```python
