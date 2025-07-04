@@ -18,7 +18,7 @@
 
 ### Gán nhãn ảnh
 **Mục đích:**  
-- ĐƯợc sử dụng để đào tạo AI và các mô hình học máy để xác định các đối tượng từ hình ảnh và video:
+- ĐƯợc sử dụng để đào tạo AI và các mô hình học máy để xác định các đối tượng từ hình ảnh và video
 - VD: ứng dụng vào mô hình xe tự lái giúp xe phân tích về đường, biển báo và chướng ngoại vật để có hướng đi an toàn
 
 **Nguyên lý:** Gán nhãn các đối tượng trong ảnh dựa vào vị trí bàng cách đóng khung,vẽ đa giác hay phân doạn gán từng px đối tượng sau đó phân loại và gán nhãn cho từng đối tượng có trong ảnh
